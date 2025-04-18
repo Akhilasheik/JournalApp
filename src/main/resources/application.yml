@@ -1,35 +1,35 @@
 weather:
   api:
-    key: ${WEATHER_API_KEY}
+    key: a167830152f441e35343ac42af7ddd0b
 spring:
   security:
     oauth2:
       client:
         registration:
           google:
-            client-id: ${GOOGLE_CLIENT_ID}
-            client-secret: ${GOOGLE_CLIENT_SECRET}
+            client-id: 16091835752-3ph9gtro6ertun06d1io6af2f02tiocd.apps.googleusercontent.com
+            client-secret: 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
   main:
     allow-circular-references: true
   server:
-    port: ${SERVER_PORT}
+    port: 8080
     servlet:
       context-path: /journal
   redis:
     data:
-      host: ${REDIS_HOST}
-      port: 15641
-      password: ${REDIS_PASSWORD}
+      host: redis-13183.c17.us-east-1-4.ec2.redns.redis-cloud.com
+      port: 13183
+      password: TxH24DgNroim5jUrhZoxhcB2buDyq
   data:
     mongodb:
-      uri: ${MONGODB_URI}
+      uri: mongodb+srv://pratikkunthe2708:04yL8fWWhtzLi7ts@cluster0.r0y0w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       database: journaldb
       auto-index-creation: true
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${JAVA_EMAIL}
-    password: ${JAVA_EMAIL_PASSWORD}
+    username: aaqilasheik@gmail.com
+    password: Aaqil@123
     properties:
       mail:
         smtp:
@@ -37,7 +37,7 @@ spring:
           starttls:
             enable: true
   kafka:
-    bootstrap-servers: ${KAFKA_SERVERS}
+    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -49,14 +49,14 @@ spring:
         spring:
           json:
             trusted:
-              packages: net.engineeringdigest.journalApp.model
+              packages: org.prakhil.prakhildemo.journalApp.model
     properties:
       security:
         protocol: SASL_SSL
       sasl:
         mechanism: PLAIN
         jaas:
-          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='X' password='X';
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='user' password='pwd';
       session:
         timeout:
           ms: 45000
